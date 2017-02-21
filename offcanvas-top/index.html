@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css" type="text/css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+<head>
+    <title>
+        Off canvas demo
+    </title>
+</head>
+
+<body>
+
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="drawer" class="icon"><i class="fa fa-bars fa-2x"></i></div>
+        <h1>Apples</h1>
+        <p>The apple is the pomaceous fruit of the apple tree.</p>
+
+        <article>
+            <h2>Red Delicious</h2>
+            <p>These bright red apples are the most common found in many supermarkets.
+            </p>
+            <p>... </p>
+            <p>... </p>
+        </article>
+
+        <article>
+            <h2>Granny Smith</h2>
+            <p>These juicy, green apples make a great filling for apple pies.</p>
+            <p>... </p>
+            <p>... </p>
+        </article>
+
+    </main>
+
+
+</body>
+
+<script type="text/javascript">
+    var element = document.getElementById("drawer");
+    element.addEventListener("click", function() {
+        console.log("clicked");
+        var menu = document.getElementsByTagName('nav');
+        console.log(menu);
+        menu[0].className = "open";
+
+        setTimeout(function() { var menu = document.getElementsByTagName('nav'); menu[0].className = ""; }, 2000);
+    });
+
+</script>
+
+</html>
